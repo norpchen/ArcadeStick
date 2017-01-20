@@ -1,4 +1,5 @@
 # ArcadeStick
+[![ArcadeStick Finished Photo](https://github.com/norpchen/ArcadeStick/blob/master/Extras/photo%20of%20finished%20ArcadeStick.jpg)
 Arduino Leonardo based HID joystick / button panel with many features.
 *	a digital joystick with special 4-way-only emulation mode for certain arcade game emulators
 *		7+ buttons
@@ -27,6 +28,9 @@ You will need
 There are currently 5 unassigned arduino pins which can be used for additional buttons (2 digital, 3 analog)
 
 
+[![Schematic](https://github.com/norpchen/ArcadeStick/blob/master/Extras/schematic.png)
+
+
 ##Dependencies
 * 	EEPROMVar http://playground.arduino.cc/Profiles/AlphaBeta 
 * 	Nico Hood's HID library 2.4 or higher https://github.com/NicoHood/HID
@@ -39,7 +43,7 @@ Built against Arduino 1.8.1, should work with older versions as well as long as 
 
 The output button mapping is set up to emulate a PS3 controller, but you can change button mappings to recreate any HID gamepad device.
 
-Note that the code and documentation refer to buttons by colors -- see the photo in the extras folder of the finished ArcadeStick to better understand what the colored buttons are.  Obviously you don't have to follow the same color scheme, just rename the definitions in the enum. (also change the LED flashing colors to match your new colors?)
+Note that the code and documentation refer to buttons by colors. Obviously you don't have to follow the same color scheme, just rename the definitions in the enum. (also change the LED flashing colors to match your new colors?)
 
 ##Programming mode
 Programming mode is a special mode where various settings of the controller can be adjusted by the user. Settings will be saved to eeprom and restored on boot.
@@ -54,7 +58,7 @@ Press any of the following buttons to make changes, which will be confirmed with
 *	PURPLE: Toggle buttons joystick mode (default is on, although output buttons are not assigned)
 *	WHITE: Step through the alternate button mappings.  The current alternate option is to switch left and right shoulder buttons to left and right triggers (default is the primary (first) mapping). 
 *	YELLOW: Toggle swap left and right shoulder buttons (yellow and white buttons) (default is off) 
-*	MOVE THE JOYSTICK IN A FULL CIRLE: will reset all settings to ‘factory defaults’  -- blinks cyan and orange many times.  Clockwise or counterclockwise doesn’t matter.
+*	MOVE THE JOYSTICK IN A FULL CIRLE: will reset all settings to â€˜factory defaultsâ€™  -- blinks cyan and orange many times.  Clockwise or counterclockwise doesnâ€™t matter.
 
 On startup, the ArcadeStick will report its current settings by flash by their colors (once for off, twice for on).
 
