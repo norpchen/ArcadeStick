@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <EEPROMex.h>
 #include <EEPROMVar.h>				// found at http://playground.arduino.cc/Profiles/AlphaBeta 
 #include <HID.h>					// Nico Hood's HID library https://github.com/NicoHood/HID
 #include <HID-Settings.h>
@@ -16,12 +15,6 @@ extern Gamepad_ Gamepad;
 
 int EEPROMAddressCounter::availableAddress= 0;
 
-#define MY_EXTENSIONS_TO_EEPROM_VAR 
-// ignore this, it's for my own extensions to the EEPROM_VAR library ( which are not helpful here )
-#ifdef MY_EXTENSIONS_TO_EEPROM_VAR 
-
-bool EEPROMAddressCounter::restore_enabled = true;
-#endif 
 
 //--------------------------------------------------------------------------------------
 
