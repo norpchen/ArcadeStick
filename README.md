@@ -5,7 +5,8 @@ Arduino Leonardo based HID joystick / button panel with many features.
 *		autofire with button assignment and speed control
 *		RGB status LED Neopixel
 *		output joystick as buttons, digital (d-hat) and analog control values 
-*		user selectable control schemes (see programming mode below):
+*		any number of alternate button mappings to emulate different game pads
+*		user selectable control options (see programming mode below):
 	* forced four way or 8 way joystick	
 	* dpad mode
 	* analog stick emulation
@@ -46,18 +47,18 @@ To enter programming mode, press and hold down both **START & SELECT** until the
 
 Once in programming mode, you can set the status LED brightness adjusting the autofire rate knob
 
-Press any of the following buttons to make changes, which will be confirmed with the button color flashes.  One blink is OFF, two blinks is ON.
-*	GREEN:  Toggle between 8-way (normal) and software emulated 4-way joystick 
-*	RED: 	Toggle analog joystick mode.  
-*	BLUE: 	Toggle D-hat joystick mode.  
-*	PURPLE: Toggle buttons joystick mode.
-*	WHITE: Use alternate button mapping mode – when on, it will switch left and right shoulder buttons to left and right triggers
-*	YELLOW: Swap left and right shoulder buttons (yellow and white buttons)  
+Press any of the following buttons to make changes, which will be confirmed with the button color flashes (matching the button that controls them).  One blink is OFF, two blinks is ON.
+*	GREEN:  Toggle between 8-way (normal) and software emulated 4-way joystick (default is 8 way)
+*	RED: 	Toggle analog joystick mode.  (default is on)
+*	BLUE: 	Toggle D-hat joystick mode.  (default is on)
+*	PURPLE: Toggle buttons joystick mode (default is on, although output buttons are not assigned)
+*	WHITE: Step through the alternate button mappings.  The current alternate option is to switch left and right shoulder buttons to left and right triggers (default is the primary (first) mapping). 
+*	YELLOW: Toggle swap left and right shoulder buttons (yellow and white buttons) (default is off) 
 *	MOVE THE JOYSTICK IN A FULL CIRLE: will reset all settings to ‘factory defaults’  -- blinks cyan and orange many times.  Clockwise or counterclockwise doesn’t matter.
 
-On startup, the current settings will flash by their colors (once for off, twice for on).
+On startup, the ArcadeStick will report its current settings by flash by their colors (once for off, twice for on).
 
-To exit programming mode, hold down both START & SELECT again.
+To exit programming mode, hold down both **START & SELECT** again.
 
 ##Autofire
 Autofire mode will repeatedly send button commands as long as the button is held down. It can be assigned to one of the four main fire buttons (green, red, blue, or purple) through the four-way selector slide switch.  The knob will control the rate and turn off autofire.
