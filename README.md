@@ -13,7 +13,7 @@ Arduino Leonardo based HID joystick / button panel with many features.
 ** change from LR shoulder to trigger buttons
 
 
-Dependencies are: 
+#Dependencies
 * 	EEPROMVar http://playground.arduino.cc/Profiles/AlphaBeta 
 * 	Nico Hood's HID library 2.4 or higher https://github.com/NicoHood/HID
 * 	Task Action http://playground.arduino.cc/Code/TaskAction
@@ -21,11 +21,11 @@ Dependencies are:
 *	My own button library https://github.com/norpchen/Buttons
 *	My neopixel color support library https://github.com/norpchen/my_color
 
-Built against Arduino 1.6.8, should work with newer versions as well. 
+Built against Arduino 1.8.1, should work with older versions as well as long as they are above 1.6.6 (an HID library requirement). 
 
 The output button mapping is set up to emulate a PS3 controller, but you can change button mappings 
 
-!Programming mode
+#Programming mode
 Programming mode is a special mode where various settings of the controller can be adjusted. Settings will be saved even after the device is unplugged.  You can reset to ‘factory defaults’ by holding down START when you plug in the device.
 To enter programming mode, press and hold down both START & SELECT until the status LED goes black. Then release START & SELECT and the status color will flash multi colors while in ‘programming mode’ 
 While in programming mode, you can set the status LED brightness using the autofire rate knob
@@ -40,5 +40,5 @@ Press any of the following buttons to make changes, which will be confirmed with
 To exit programming mode, hold down both START & SELECT again.
 On startup, the current settings will flash by their colors.
 
-!Autofire
+#Autofire
 Autofire mode will repeatedly send button commands as long as the button is held down. It can be assigned to one of the four main fire buttons (green, red, blue, or purple) through the four-way selector slide switch on the front left of the controller.  The knob will control the rate and turn off autofire.
