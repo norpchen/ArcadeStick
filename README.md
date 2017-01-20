@@ -6,11 +6,11 @@ Arduino Leonardo based HID joystick / button panel with many features.
 *		RGB status LED Neopixel
 *		output joystick as buttons, digital (d-hat) and analog control values 
 *		user selectable control schemes (see programming mode below):
-** forced four way or 8 way joystick	
-** dpad mode
-** analog stick emulation
-** flip LR shoulder button mappings
-** change from LR shoulder to trigger buttons
+	* forced four way or 8 way joystick	
+	* dpad mode
+	* analog stick emulation
+	* flip LR shoulder button mappings
+	* change from LR shoulder to trigger buttons
 
 
 #Dependencies
