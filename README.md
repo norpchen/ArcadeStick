@@ -25,7 +25,15 @@ You will need
 * slider switch and potentiometer for autofire (optional)
 * wires, resistors, etc. See the schematic in the extras folder
 
-There are currently 5 unassigned arduino pins which can be used for additional buttons (2 digital D0 and D1, 3 analog A3, A4,A5)
+There are currently 3 unassigned analog arduino pins which can be used for additional buttons (3 analog A3, A4, A5).  You could use these to connect a true analog stick, for example. 
+
+All digital pins are in use in the sketch as is. Digital pins D0 and D1 are not referenced in the code, but they are used for the UART / USB communication and are not available for general use.
+
+If you'd like to add many more buttons, you could upgrade to an Arduino Mega and change the HID library to the one for the Mega.  
+
+Or you could connect several buttons together on a single analog input (with a pull up resistor) using different pull-down resistors, (creating a unique voltage divider network for each button) and using the AnalogButtons class in my [button library](https://github.com/norpchen/Buttons)  However, these analog buttons _do not support multiple simultaneous presses_ (unlike the digital buttons which can all be pressed at the same time).  Therefore make sure the buttons you connect this way do not require that.  
+
+Each instance of the AnalogButton class uses one analog pin and can support at least 8, likely 16 (maybe more?) buttons -- the number depends on your choice of resistor values and their precision (more information is available on the button library page).  With three unused analog pins (A3, A4, A5) available, this gives you up to 48 buttons (of which only one from each set of 3 can be pushed together).  If you do not want the autofire function, that frees up two analog pins, bringing the total to 80. If you move the LED to a digital pin, that frees another analog pin for a total of 96. Really at that point you should be looking at a matrix scanning arrangement to remain sane.
 
 
 [![Schematic](https://github.com/norpchen/ArcadeStick/blob/master/Extras/schematic.png)
