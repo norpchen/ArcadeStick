@@ -13,6 +13,18 @@ Arduino Leonardo based HID joystick / button panel with many features.
 	* change from LR shoulder to trigger buttons
 	* NKEY rollover -- no ghosting or limit to how many buttons can be pressed at the same time.
 
+## Physical hardware and layout
+You will need 
+* one Arduino Leonardo 
+* a case or box of some form
+* buttons buttons buttons
+* a joystick (or more buttons)
+* One neopixel (WS2803) RGB LED (optional, but recommended)
+* slider switch and potentiometer for autofire (optional)
+* wires, resistors, etc. See the schematic in the extras folder
+
+There are currently 5 unassigned arduino pins which can be used for additional buttons (2 digital, 3 analog)
+
 
 ##Dependencies
 * 	EEPROMVar http://playground.arduino.cc/Profiles/AlphaBeta 
@@ -24,9 +36,9 @@ Arduino Leonardo based HID joystick / button panel with many features.
 
 Built against Arduino 1.8.1, should work with older versions as well as long as they are above 1.6.6 (an HID library requirement). 
 
-The output button mapping is set up to emulate a PS3 controller, but you can change button mappings 
+The output button mapping is set up to emulate a PS3 controller, but you can change button mappings to recreate any HID gamepad device.
 
-There are currently 5 unassigned arduino pins which can be used for additional buttons (2 digital, 3 analog)
+Note that the code and documentation refer to buttons by colors -- see the photo in the extras folder of the finished ArcadeStick to better understand what the colored buttons are.  Obviously you don't have to follow the same color scheme, just rename the definitions in the enum. (also change the LED flashing colors to match your new colors?)
 
 ##Programming mode
 Programming mode is a special mode where various settings of the controller can be adjusted by the user. Settings will be saved to eeprom and restored on boot.
