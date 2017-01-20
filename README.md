@@ -20,12 +20,12 @@ You will need
 * one Arduino Leonardo 
 * a case or box of some form
 * buttons buttons buttons
-* a joystick (or more buttons)
-* One neopixel (WS2803) RGB LED (optional, but recommended)
+* a joystick (or 4 more buttons)
+* One neopixel (WS2812) RGB LED (optional, but recommended)
 * slider switch and potentiometer for autofire (optional)
 * wires, resistors, etc. See the schematic in the extras folder
 
-There are currently 5 unassigned arduino pins which can be used for additional buttons (2 digital, 3 analog)
+There are currently 5 unassigned arduino pins which can be used for additional buttons (2 digital D0 and D1, 3 analog A3, A4,A5)
 
 
 [![Schematic](https://github.com/norpchen/ArcadeStick/blob/master/Extras/schematic.png)
